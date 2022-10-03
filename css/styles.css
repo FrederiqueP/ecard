@@ -1,0 +1,17 @@
+body {
+    font-family: 'Barlow', sans-serif;
+    color: #533B4D;
+}
+header {
+    width: 600px;
+    text-align: center;
+}
+
+.outline {
+    margin: 30px;
+}
+
+#my-canvas {
+    border: 1px solid black;
+}
+
