@@ -7,6 +7,9 @@ export class Painter {
         // Le constructeur permet de créer des propriétés et de les initialiser
         this.canvas = document.getElementById('my-canvas');
         this.context = this.canvas.getContext('2d');
+        // peindre canvas en blanc
+        this.context.fillStyle = 'white';
+        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         // position initiale
         this.x = 0;
         this.y = 0;
@@ -19,6 +22,10 @@ export class Painter {
 
         // On lance aussi tout ce qu'on doit faire lors du chargement du painter
         this.init();
+
+
+
+
     }
 
     init() {
@@ -50,7 +57,7 @@ export class Painter {
         
             this.context.lineWidth = this.currentLineWidth;
             this.context.lineCap = 'round';
-            this.context.strokeStyle = this.currentColor;   
+            // this.context.strokeStyle = this.currentColor;   
             // coordonnées début 
             this.context.moveTo(this.x, this.y); // à partir
          
@@ -75,6 +82,11 @@ export class Painter {
     onMouseUp() {
         // souris relachée ne plus dessiner
         this.isDrawing = false;
+    }
+    
+    changeColor(color) {
+        this.context.strokeStyle = color;   
+
     }
 
 }

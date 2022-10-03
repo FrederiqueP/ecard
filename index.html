@@ -17,6 +17,33 @@
         <canvas id="my-canvas" width="600" height="400">Ce navigateur ne supporte pas canvas</canvas>
     </section>
 
+    <section class="utilities">
+        <div class="line tools">
+            <p>Outils</p>
+            <div class="eraser"><i class="fa-solid fa-eraser"></i></div>
+            <div class="pipette"><i class="fa-solid fa-eye-dropper"></i></div>
+        </div>
+        <div class="line" id="colorList">
+            <p>Couleur</p>
+            <!-- dans data-color je donne le code css de la couloer : son nom, hexa ou rgb -->
+            <div data-color="black"     class="color-picker black"></div>
+            <div data-color="brown"     class="color-picker brown"></div>
+            <div data-color="red"       class="color-picker red"></div>
+            <div data-color="yellow"    class="color-picker yellow"></div>
+            <div data-color="green"     class="color-picker green"></div>
+            <div data-color="blue"      class="color-picker blue"></div>
+            <div id="square">
+                <!-- color picker en html5 -->
+                <input type="color" id="my-color" value = "#e66465" name="my-color">
+            </div>
+        </div>
+        <div class="line thickness">
+            <p>Epaisseur</p>
+            <div>Fin</div>
+            <div>Normal</div>
+            <div>Epais</div>
+        </div>
+    </section>
 
    </main>
 </body>
