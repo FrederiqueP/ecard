@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECard</title>
-    <script src="https://kit.fontawesome.com/6336249732.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/index.js"></script>
 </head>
@@ -17,6 +17,34 @@
         <canvas id="my-canvas" width="600" height="400">Ce navigateur ne supporte pas canvas</canvas>
     </section>
 
+    <section class="utilities">
+        <div class="line tools">
+            <p>Outils</p>
+            <div id="my-pen"><i class="las la-pen"></i></div>
+            <div id="my-eraser"><i class="las la-eraser"></i></div>
+            <div id="undo"><i class="las la-undo-alt"></i></div>
+        </div>
+        <div class="line" id="colorList">
+            <p>Couleur</p>
+            <!-- dans data-color je donne le code css de la couloer : son nom, hexa ou rgb -->
+            <div data-color="black"     class="color-picker black"></div>
+            <div data-color="brown"     class="color-picker brown"></div>
+            <div data-color="red"       class="color-picker red"></div>
+            <div data-color="yellow"    class="color-picker yellow"></div>
+            <div data-color="green"     class="color-picker green"></div>
+            <div data-color="blue"      class="color-picker blue"></div>
+            <div id="square">
+                <!-- color picker en html5 -->
+                <input type="color" id="my-color" value = "#e66465" name="my-color">
+            </div>
+        </div>
+        <div class="line thickness">
+            <p>Epaisseur</p>
+            <div id="minus">Fin</div>
+            <div id="normal">Normal</div>
+            <div id="plus">Epais</div>
+        </div>
+    </section>
 
    </main>
 </body>
