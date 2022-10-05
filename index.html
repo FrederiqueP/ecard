@@ -26,7 +26,7 @@
         </div>
         <div class="line" id="colorList">
             <p>Couleur</p>
-            <!-- dans data-color je donne le code css de la couloer : son nom, hexa ou rgb -->
+            <!-- dans data-color je donne le code css de la couleur : son nom, hexa ou rgb -->
             <div data-color="black"     class="color-picker black"></div>
             <div data-color="brown"     class="color-picker brown"></div>
             <div data-color="red"       class="color-picker red"></div>
@@ -40,10 +40,38 @@
         </div>
         <div class="line thickness">
             <p>Epaisseur</p>
-            <div id="minus">Fin</div>
-            <div id="normal">Normal</div>
-            <div id="plus">Epais</div>
+            <div class="mywidth" id="minus">Fin</div>
+            <div class="mywidth" id="normal">Normal</div>
+            <div class="mywidth" id="plus">Epais</div>
         </div>
+    </section>
+
+    <section class="envoi">
+        <input class="" id="button-show-form" type="button" value="Envoyer une e-card">
+    </section>
+
+    <section class="hidden" id="form-container">
+        <form action="contact.php">
+            <div class="item">
+                <label for="senderemail">Votre email :</label>
+                <input type="email" name="senderemail" value="expediteur@example.test" placeholder="expediteur@example.test">
+            </div>
+            <div class="item">
+                <label for="recipientemail">Email du destinataire :</label>
+                <input type="email" name="recipientemail" value="destinataire@here.test" placeholder="destinataire@here.test"> 
+            </div>    
+            <div class="item">
+                <textarea type="text" name="message" value="">Votre message </textarea>
+            </div>
+            <div class="item">
+                <input type="checkbox" name="receivecopy"  id="receivecopy" value="">
+                <label for="receive-copy">Recevoir une copie du message</label>
+            </div>
+            <div class="item">
+                <input type="submit" value="Envoyer">
+                <input type="hidden" name="image" id="image">
+            </div>
+        </form>
     </section>
 
    </main>

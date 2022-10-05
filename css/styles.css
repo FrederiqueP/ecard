@@ -3,23 +3,28 @@ body {
     color: #533B4D;
 }
 header {
-    width: 600px;
+    width: 680px;
     text-align: center;
 }
 
 .outline {
-    margin: 30px;
+    margin: 0 0 0 30px;
+}
+
+.hidden{
+    display: none;
 }
 
 #my-canvas {
-    border: 1px solid black;
+    border: 40px solid bisque;
+    border-radius: 5px;
 }
 
 .utilities {
     border-radius: 5px;
-    width: 600px;
+    width: 680px;
     background-color: bisque;
-    margin: 30px;
+    margin: 0 0 30px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -36,7 +41,18 @@ header {
     border: 1px solid;
     margin: 10px;  
     justify-content: center;
-    align-self: center;
+    align-self: center;  
+}
+
+.utilities .line i{
+    font-size: 40px;
+    padding: 5px;
+}
+
+.utilities .line .mywidth{
+    padding: 10px;
+    text-align: center;
+    height: auto;
 }
 
 .utilities p{
@@ -115,4 +131,17 @@ header {
   ::-moz-focus-inner{
     padding: 0;
   } 
+
+/* envoyer une e-card */
+.envoi {
+    margin-left: 30px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: minmax(30px, auto);
+}
+
 
