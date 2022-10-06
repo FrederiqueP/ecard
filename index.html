@@ -23,6 +23,8 @@
             <div id="my-pen"><i class="las la-pen"></i></div>
             <div id="my-eraser"><i class="las la-eraser"></i></div>
             <div id="undo"><i class="las la-undo-alt"></i></div>
+            <div><i id="favorite" class="las la-star-of-life"></i></div>
+         
         </div>
         <div class="line" id="colorList">
             <p>Couleur</p>
@@ -54,14 +56,18 @@
         <form action="contact.php">
             <div class="item">
                 <label for="senderemail">Votre email :</label>
-                <input type="email" name="senderemail" value="expediteur@example.test" placeholder="expediteur@example.test">
+                <input type="email" name="senderemail"  required value="" placeholder="expediteur@example.test">
+                <!-- <input type="email" name="senderemail"  value="expediteur@example.test" placeholder="expediteur@example.test"> -->
+                <p id="senderemail-error"></p>
             </div>
             <div class="item">
                 <label for="recipientemail">Email du destinataire :</label>
-                <input type="email" name="recipientemail" value="destinataire@here.test" placeholder="destinataire@here.test"> 
+                <input type="email" name="recipientemail" required value="" placeholder="destinataire@here.test"> 
+                <!-- <input type="email" name="recipientemail"  value="destinataire@here.test" placeholder="destinataire@here.test">  -->
+                <p id="recipientemail-error"></p>
             </div>    
             <div class="item">
-                <textarea type="text" name="message" value="">Votre message </textarea>
+                <textarea type="text" name="message" value="" placeholder="Votre message"></textarea>
             </div>
             <div class="item">
                 <input type="checkbox" name="receivecopy"  id="receivecopy" value="">

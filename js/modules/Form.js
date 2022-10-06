@@ -35,9 +35,34 @@ export class Form {
         fetch('contact.php', {
             method: 'POST',
             body: data
-        });
+            })
+            .then (response=>response.json())
+            .then (data=>{
+                // le tableau  en php devient un objet en javascript
+                // on regarde la propriété success
+                if(data.success) {
+                    // message succcès 
+                    alert ('Email envoyé avec succès');
+                    // réinitialisation du formulaire
+                    myForm.reset();
+                    document.getElementById('senderemail-error').textContent = "";
+                    document.getElementById('recipientemail-error').textContent = "";
+                    // passer la section qui contient le formulaire à caché
+                    document.getElementById('form-container').classList.add('hidden');
+                }
+                else {
+                    // affiche les erreurs
+                    let error1= data.errors.senderemail; 
+                    let error2 = data.errors.recipientemail; 
+                    if(error1){
+                        document.getElementById('senderemail-error').textContent = error1;
+                    }
+                    if(error2){
+                        document.getElementById('recipientemail-error').textContent = error2;
+                    }
+                }
+            });
 
     }
   
-
 }

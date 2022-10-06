@@ -11,6 +11,9 @@ export class Utilities {
         this.pen = document.getElementById("my-pen");
         this.eraser = document.getElementById("my-eraser");
         this.undo = document.getElementById("undo");
+        this.favorite = document.getElementById("favorite");
+        // affiche la couleur en cours dans l'étoile
+        this.favorite.style.color = this.painter.currentColor;
         this.getTools();
     
         // sélection de la couleur sur un input color
@@ -29,6 +32,7 @@ export class Utilities {
         // prendre outil crayon
         this.pen.addEventListener('click', (e)   => {
             this.painter.changeColor(this.painter.currentColor);
+           
         });
         // prendre outil gomme (on ecrit en blanc)
         this.eraser.addEventListener('click', (e)   => {
@@ -38,6 +42,7 @@ export class Utilities {
         this.undo.addEventListener('click', (e)   => {
             this.painter.context.clearRect(0, 0, this.painter.canvas.width, this.painter.canvas.height);
         });
+        
     }
 
     getColor() {
@@ -67,6 +72,8 @@ export class Utilities {
             const color = this.colorPalette.value;
             this.painter.changeColor(color);
             this.painter.currentColor = color;    
+             // affiche la couleur en cours dans l'étoile
+             this.favorite.style.color = this.painter.currentColor;
         });
 
     }
